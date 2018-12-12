@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane fx:id="ventanaAgregarDeposito" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="459.0" style="-fx-background-color: #91DC5A;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.insumos.ControladorInsumoReporte">
+   <header>
+      <HBox alignment="CENTER" prefHeight="58.0" prefWidth="392.0" style="-fx-background-color: #91DC5A;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Reporte Insumos">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </header>
+   <content>
+      <AnchorPane prefHeight="353.0" prefWidth="392.0" style="-fx-background-color: #303030;">
+         <children>
+            <Button fx:id="btnGenerarReporte" defaultButton="true" disable="true" layoutX="52.0" layoutY="466.0" mnemonicParsing="false" onMouseClicked="#generarReporte" style="-fx-background-color: #505050;" text="Generar Reporte" textFill="WHITE" />
+            <Button fx:id="btnDescartar" cancelButton="true" layoutX="344.0" layoutY="466.0" mnemonicParsing="false" onMouseClicked="#descartar" style="-fx-background-color: #505050;" text="Descartar" textFill="#fffbfb" />
+            <Text fill="WHITE" layoutX="27.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha Inicio" />
+            <Text fill="WHITE" layoutX="27.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha Fin" />
+            <DatePicker fx:id="fechaInicio" disable="true" layoutX="117.0" layoutY="81.0" prefHeight="25.0" prefWidth="260.0" />
+            <DatePicker fx:id="fechaFin" disable="true" layoutX="117.0" layoutY="113.0" prefHeight="25.0" prefWidth="259.0" />
+            <Text fill="WHITE" layoutX="34.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria" wrappingWidth="84.158203125" />
+            <TreeView fx:id="treeViewcategoriaInsumo" disable="true" layoutX="33.0" layoutY="259.0" prefHeight="188.0" prefWidth="394.0" />
+            <Text fill="WHITE" layoutX="27.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Rango" />
+            <ComboBox fx:id="tipoDeRango" layoutX="117.0" layoutY="31.0" onAction="#tipoDeRango" prefHeight="25.0" prefWidth="260.0" />
+            <Text fill="WHITE" layoutX="27.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semestral" />
+            <Text fill="WHITE" layoutX="27.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mes" />
+            <Text fill="WHITE" layoutX="266.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Año" />
+            <Text fill="WHITE" layoutX="266.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Año" />
+            <ComboBox fx:id="semestral" disable="true" layoutX="89.0" layoutY="157.0" prefWidth="150.0" />
+            <ComboBox fx:id="meses" disable="true" layoutX="89.0" layoutY="193.0" prefWidth="150.0" />
+            <ComboBox fx:id="anioSemestre" disable="true" layoutX="302.0" layoutY="157.0" prefHeight="25.0" prefWidth="128.0" />
+            <ComboBox fx:id="anio" disable="true" layoutX="302.0" layoutY="193.0" prefHeight="25.0" prefWidth="128.0" />
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>

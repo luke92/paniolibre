@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Main">
+   <children>
+      <ImageView fitHeight="427.0" fitWidth="600.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../iconos/herramientasfondo233.png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="progressBar" layoutX="5.0" layoutY="399.0" prefHeight="22.0" prefWidth="590.0" progress="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+      <Label fx:id="labeltext" layoutX="2.0" layoutY="384.0" prefHeight="15.0" prefWidth="367.0" style="-fx-background-color: linear-gradient(to right, rgba(0, 147,196, 1.0), rgba(255, 255, 255, 0.4)); -fx-background-radius: 1;" textFill="WHITE" AnchorPane.leftAnchor="5.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

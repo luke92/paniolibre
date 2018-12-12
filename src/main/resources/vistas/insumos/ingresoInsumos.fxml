@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane fx:id="ventanaIngresarInsumo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="996.0" style="-fx-background-color: #91DC5A;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.insumos.ControladorIngresoInsumo">
+   <header>
+      <HBox alignment="CENTER" prefHeight="58.0" prefWidth="392.0" style="-fx-background-color: #91DC5A;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingreso de Stock" wrappingWidth="197.5517578125">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </header>
+   <content>
+      <AnchorPane prefHeight="577.0" prefWidth="952.0" style="-fx-background-color: #303030;">
+         <children>
+            <Text fill="WHITE" layoutX="17.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deposito" />
+            <DatePicker fx:id="datePickerFecha" layoutX="165.0" layoutY="247.0" prefHeight="26.0" prefWidth="148.0" />
+            <Button fx:id="btnIngresar" defaultButton="true" disable="true" layoutX="735.0" layoutY="597.0" mnemonicParsing="false" onMouseClicked="#confirmarIngresar" style="-fx-background-color: #505050;" text="Ingresar" textFill="WHITE" />
+            <Button fx:id="btnDescartar" cancelButton="true" layoutX="853.0" layoutY="597.0" mnemonicParsing="false" onMouseClicked="#descartarPedido" style="-fx-background-color: #505050;" text="Descartar" textFill="#fffbfb" />
+            <TableView fx:id="tablaPedido" layoutX="420.0" layoutY="58.0" prefHeight="234.0" prefWidth="575.0">
+              <columns>
+                <TableColumn fx:id="columnaNumeroOrdenPedido" prefWidth="128.0" text="N° Orden De Compra" />
+                <TableColumn fx:id="columnaPedidoProveedor" minWidth="0.0" prefWidth="121.0" text="Proveedor" />
+                  <TableColumn fx:id="columnaFechaSolicitud" minWidth="0.0" prefWidth="117.0" text="Fecha de Solicitud" />
+                  <TableColumn fx:id="columnaPedidoEstado" minWidth="0.0" prefWidth="103.0" text="Estado" />
+                  <TableColumn fx:id="columnaPedidoIdMantis" minWidth="0.0" prefWidth="103.0" text="Id Mantis" />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="comboDeposito" layoutX="164.0" layoutY="131.0" prefWidth="150.0" />
+            <HBox alignment="CENTER_LEFT" layoutX="4.0" layoutY="366.0" prefHeight="56.0" prefWidth="469.0" style="-fx-background-color: #91DC5A;">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Insumos">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <HBox prefHeight="63.0" prefWidth="174.0" />
+                  <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="47.0" prefWidth="50.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #404040;" text="Filtrar">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/busqueda.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="txtBusquedaInsumo" prefHeight="25.0" prefWidth="292.0">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="420.0" layoutY="2.0" prefHeight="55.0" prefWidth="575.0" style="-fx-background-color: #91DC5A;">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Pedidos" wrappingWidth="117.5927734375">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <HBox prefHeight="63.0" prefWidth="174.0" />
+                  <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="47.0" prefWidth="50.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #404040;" text="Filtrar">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/busqueda.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="txtBusquedaPedido" prefHeight="25.0" prefWidth="292.0">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <TableView fx:id="tablaInsumos" layoutX="4.0" layoutY="425.0" prefHeight="168.0" prefWidth="469.0">
+               <columns>
+                  <TableColumn fx:id="columnaCodigo" prefWidth="70.0" text="Codigo" />
+                  <TableColumn fx:id="columnaNombre" minWidth="0.0" prefWidth="186.0" text="Nombre" />
+                  <TableColumn fx:id="columnaCategoria" minWidth="0.0" prefWidth="125.0" text="Categoria" />
+                  <TableColumn fx:id="columnaCantidad" minWidth="0.0" prefWidth="81.0" text="Cantidad" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnEnviar" disable="true" layoutX="477.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#enviar" prefHeight="35.0" prefWidth="47.0" text="&gt;&gt;" />
+            <Button fx:id="btnDevolver" disable="true" layoutX="477.0" layoutY="494.0" mnemonicParsing="false" onMouseClicked="#devolver" prefHeight="35.0" prefWidth="47.0" text="&lt;&lt;" />
+            <HBox alignment="CENTER_LEFT" layoutX="526.0" layoutY="369.0" prefHeight="56.0" prefWidth="468.0" style="-fx-background-color: #91DC5A;">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Ingresos de Insumos">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <TableView fx:id="tablaInsumosCantidades" layoutX="526.0" layoutY="426.0" prefHeight="168.0" prefWidth="468.0">
+              <columns>
+                <TableColumn fx:id="columnaCodigoDerecha" prefWidth="107.0" text="Codigo" />
+                <TableColumn fx:id="columnaNombreDerecha" prefWidth="201.0" text="Nombre" />
+                  <TableColumn fx:id="columnaCantidadDerecha" prefWidth="139.0" text="Cantidad" />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="comboTipoDeIngreso" layoutX="165.0" layoutY="187.0" onAction="#tipoDeIngreso" prefWidth="150.0" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Ingreso" />
+            <Text fill="WHITE" layoutX="17.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de Ingreso" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo Orden De Trabajo" />
+            <TextField fx:id="textCodigoOrden" layoutX="165.0" layoutY="300.0" />
+            <Button fx:id="btnProcesarPedido" defaultButton="true" disable="true" layoutX="868.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#procesarPedido" style="-fx-background-color: #505050;" text="Procesar Pedido" textFill="WHITE" />
+            <Button fx:id="btnObtenerOrdenes" layoutX="330.0" layoutY="276.0" mnemonicParsing="false" onMouseClicked="#obtenerOrdenes" prefHeight="43.0" prefWidth="81.0">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="65.0" onMouseClicked="#obtenerOrdenes" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../iconos/listaOrdenes.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="18.0" layoutY="11.0" prefHeight="103.0" prefWidth="86.0" text="Label">
+               <graphic>
+                  <ImageView fitHeight="103.0" fitWidth="162.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../iconos/il_570xN.1199720473_2ep7.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="123.0" layoutY="25.0" prefHeight="78.0" prefWidth="190.0" style="-fx-background-color: #91DC5A;" text="PañoLibre">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>

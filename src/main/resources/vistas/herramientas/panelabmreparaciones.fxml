@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="panelABMReparaciones" hbarPolicy="NEVER" nodeOrientation="LEFT_TO_RIGHT" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.ReparacionesABM">
+   <content>
+      <AnchorPane prefHeight="900.0" prefWidth="300.0">
+         <children>
+            <VBox fx:id="vboxFormulario" prefHeight="900.0" prefWidth="300.0" spacing="10.0" style="-fx-background-color: #404040;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="LabelTitulo" prefHeight="59.0" prefWidth="294.0" style="-fx-background-color: #91DC5A;" text="&gt;Agregar Reparacion">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabelHerramientas" text="&gt;Info Herramienta" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" top="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="texCodigo" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Codigo ">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="texNombre" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Nombre ">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="texMarca" editable="false" prefHeight="30.0" prefWidth="246.0" promptText="Marca">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Separator fx:id="separatorHerramienta" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Label fx:id="labelReparacionEnvio" text="&gt;Info Reparacion Envio" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboTipoReparacion" prefHeight="30.0" prefWidth="246.0" promptText="Tipo de Reparacion">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <DatePicker fx:id="dateFechaEnvio" editable="false" prefHeight="30.0" prefWidth="245.0" promptText="Fecha de Envio">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </DatePicker>
+                  <TextArea fx:id="texComentarioEnv" prefHeight="142.0" prefWidth="296.0" promptText="Comentario sobre el envio...">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <Separator fx:id="separatorReparacionEnvio" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Label fx:id="labelReparacionDevolucion" text="&gt;Info Reparacion Devolucion" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <DatePicker fx:id="dateFechaRecepcion" editable="false" prefHeight="30.0" prefWidth="245.0" promptText="Fecha de Recpcion">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </DatePicker>
+                  <DatePicker fx:id="dateFechaGarantia" editable="false" prefHeight="30.0" prefWidth="245.0" promptText="Fecha Exp.  Garantia">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </DatePicker>
+                  <TextArea fx:id="texComentarioRecepcion" prefHeight="142.0" prefWidth="296.0" promptText="Comentario sobre el recepcion..">
+                     <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <HBox fx:id="hboxBotones" prefHeight="30.0" prefWidth="250.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnLimpiar" mnemonicParsing="false" onMouseClicked="#limpiar" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: white;" text="Limpiar">
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" color="#1965d0" />
+                           </effect>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#guardar" prefHeight="30.0" prefWidth="75.0" text="Guardar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" color="#6468b2" />
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnIngresar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#ingresar" prefHeight="30.0" prefWidth="75.0" text="Ingresar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" color="#6468b2" />
+                           </effect>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

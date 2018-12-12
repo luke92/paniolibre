@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane fx:id="ventanaVerAsignaciones" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="624.0" style="-fx-background-color: #91DC5A;" xmlns="http://javafx.com/javafx/8.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.ordenes.VerAsignacionesControlador">
+   <header>
+      <HBox alignment="CENTER" prefHeight="58.0" prefWidth="392.0" style="-fx-background-color: #91DC5A;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ver  Asignaciones">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </header>
+   <content>
+      <AnchorPane prefHeight="353.0" prefWidth="392.0" style="-fx-background-color: #303030;">
+         <children>
+            <Button fx:id="btnVovler" cancelButton="true" layoutX="487.0" layoutY="528.0" mnemonicParsing="false" onMouseClicked="#volver" style="-fx-background-color: #505050;" text="Volver" textFill="#fffbfb" />
+            <TableView fx:id="tablaAsignaciones" layoutX="81.0" layoutY="73.0" prefHeight="446.0" prefWidth="452.0">
+              <columns>
+                <TableColumn fx:id="columnaID" prefWidth="75.0" text="ID " />
+                <TableColumn fx:id="columnaProyecto" prefWidth="101.0" text="Proyecto" />
+                  <TableColumn fx:id="columnaTecnico" prefWidth="88.0" text="Tecnico" />
+              </columns>
+            </TableView>
+            <TextField fx:id="textBusqueda" layoutX="384.0" layoutY="35.0" />
+            <Text fill="WHITE" layoutX="333.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtrar: " />
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>

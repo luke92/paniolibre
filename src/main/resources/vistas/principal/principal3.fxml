@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="VentanaPrincipal" prefHeight="600.0" prefWidth="1157.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.MenuPrincipalControlador">
+   <center>
+      <BorderPane fx:id="principal" prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: #303030;">
+         <top>
+            <VBox fx:id="contenedorBarras" style="-fx-background-color: #91DC5A;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="barraStage" alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="1278.0" style="-fx-background-color: #404040;">
+                     <children>
+                        <Button fx:id="btnVolver" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="44.0" minWidth="39.0" mnemonicParsing="false" onMouseClicked="#volverMenuPrincipal" prefHeight="47.0" prefWidth="48.0">
+                           <graphic>
+                              <ImageView fitHeight="44.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../iconos/tecla-de-flecha-izquierda.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="5.0" right="4.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Separator fx:id="separatorVolver" orientation="VERTICAL" prefHeight="200.0" />
+                        <ImageView fitHeight="60.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+                           <image>
+                              <Image url="@../../iconos/martillo2.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fx:id="txtRuta" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Pañolibre" wrappingWidth="114.962890625">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="2153.0">
+                           <children>
+                              <Label fx:id="lblNombreSeccion" prefHeight="53.0" prefWidth="474.0" textFill="#8ad256">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <Button fx:id="btnAcercaDe" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="5.0" minHeight="25.0" minWidth="33.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" textFill="WHITE" textOverrun="CLIP">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="40.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../iconos/question-mark.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnConfiguracion" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="5.0" minHeight="25.0" minWidth="33.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" text="Configuracion" textFill="WHITE" textOverrun="CLIP">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="40.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../iconos/camera-settings-cogwheel.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnUsuario" alignment="BASELINE_LEFT" graphicTextGap="5.0" minHeight="25.0" minWidth="110.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Usuario" textFill="WHITE" textOverrun="CLIP">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../iconos/usuario_verde.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnMinimizar" contentDisplay="GRAPHIC_ONLY" minHeight="27.0" minWidth="27.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="27.0" text="Button">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../iconos/minimize_verde.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnMaximizar" contentDisplay="GRAPHIC_ONLY" minHeight="27.0" minWidth="27.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="27.0" text="Button">
+                           <graphic>
+                              <ImageView fx:id="imageMaximizar" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../iconos/maximize_verde.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnCerrar" contentDisplay="GRAPHIC_ONLY" minHeight="27.0" minWidth="27.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="27.0" text="Button">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../iconos/closewindowapplication_cerca_ventan_2874.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <Blend />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="HboxSeparador1" prefHeight="3.0" prefWidth="721.0" style="-fx-background-color: #C1C1C1;" />
+                  <HBox fx:id="barraPrincipal" alignment="TOP_CENTER" prefHeight="116.0" prefWidth="1278.0" style="-fx-background-color: #303030;">
+                     <children>
+                        <Button fx:id="btnInsumos" alignment="CENTER" contentDisplay="TOP" onMouseClicked="#abrirInsumos" prefHeight="116.0" prefWidth="158.0" text="Insumos">
+                           <graphic>
+                              <ImageView fitHeight="73.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../iconos/insumos.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnHerramientas" alignment="CENTER" contentDisplay="TOP" onMouseClicked="#abrirHerramientas" prefHeight="116.0" prefWidth="158.0" text="Herramientas">
+                           <graphic>
+                              <ImageView fitHeight="73.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../iconos/herramientasTransparente.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnOrdenesTrabajo" alignment="CENTER" contentDisplay="TOP" onMouseClicked="#abrirOrdenesTrabajo" prefHeight="116.0" prefWidth="158.0" text="Ordenes de Trabajo">
+                           <graphic>
+                              <ImageView fitHeight="73.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../iconos/lista.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnAdministracion" alignment="CENTER" contentDisplay="TOP" onMouseClicked="#abrirAdministracion" prefHeight="116.0" prefWidth="158.0" text="Administracion">
+                           <graphic>
+                              <ImageView fitHeight="73.0" fitWidth="92.0" onMouseClicked="#abrirAdministracion" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../iconos/engranajes-herramienta-de-configuracion(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnAlertas" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#abrirAlertas" prefHeight="116.0" prefWidth="158.0">
+                           <graphic>
+                              <Pane prefHeight="112.0" prefWidth="158.0">
+                                 <children>
+                                    <ImageView fitHeight="73.0" fitWidth="92.0" layoutX="36.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../iconos/peligro.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="WHITE" layoutX="53.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alertas" wrappingWidth="41.8203125" />
+                                    <Label fx:id="lblAlertas" alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="5.0" prefHeight="20.0" prefWidth="22.0" text="0" />
+                                 </children>
+                              </Pane>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox fx:id="HboxSeparador2" prefHeight="3.0" prefWidth="721.0" style="-fx-background-color: #C1C1C1;" />
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <AnchorPane fx:id="panel_login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="298.0" prefWidth="396.0" style="-fx-background-radius: 50; -fx-background-color: #3D3D3D;" BorderPane.alignment="CENTER">
+               <children>
+                  <PasswordField fx:id="textPass" layoutX="137.0" layoutY="204.0" prefHeight="25.0" prefWidth="160.0" promptText="Contraseña" />
+                  <TextField fx:id="textUsuario" layoutX="137.0" layoutY="156.0" prefHeight="25.0" prefWidth="160.0" promptText="Usuario" />
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="99.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../iconos/usuario_verde.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="110.0" layoutX="150.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../iconos/logo_login.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="99.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../iconos/candado%20(23).png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnLogin" layoutX="101.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="197.0" text="Login" />
+                  <ImageView fx:id="imageUsuario" fitHeight="24.0" fitWidth="23.0" layoutX="306.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imagePass" fitHeight="24.0" fitWidth="23.0" layoutX="306.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <effect>
+                  <Reflection fraction="0.0" topOpacity="1.0" />
+               </effect>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </center>
+   <top>
+      <AnchorPane fx:id="AnchorSeparatorTop" maxHeight="3.0" prefHeight="3.0" prefWidth="1285.0" style="-fx-background-color: #C1C1C1;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnTopLeft" maxHeight="3.0" maxWidth="25.0" minHeight="3.0" minWidth="25.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="25.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="SE_RESIZE" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnTopRight" maxHeight="3.0" maxWidth="25.0" minHeight="3.0" minWidth="25.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="25.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="SW_RESIZE" />
+               </cursor>
+            </Button>
+         </children>
+         <cursor>
+            <Cursor fx:constant="V_RESIZE" />
+         </cursor>
+      </AnchorPane>
+   </top>
+   <left>
+      <HBox fx:id="HboxSeparadorLeft" prefHeight="3.0" prefWidth="3.0" style="-fx-background-color: #C1C1C1;" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="W_RESIZE" />
+         </cursor>
+      </HBox>
+   </left>
+   <right>
+      <HBox fx:id="HboxSeparadorRight" prefHeight="6.0" prefWidth="3.0" style="-fx-background-color: #C1C1C1;" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="W_RESIZE" />
+         </cursor>
+      </HBox>
+   </right>
+   <bottom>
+      <AnchorPane fx:id="AnchorSeparatorBotton" maxHeight="3.0" prefHeight="3.0" prefWidth="1285.0" style="-fx-background-color: #C1C1C1;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnBottonRight" layoutX="768.0" layoutY="-3.0" maxHeight="3.0" maxWidth="25.0" minHeight="3.0" minWidth="25.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="25.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="-4.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="NW_RESIZE" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnBottonLeft" maxHeight="3.0" maxWidth="25.0" minHeight="3.0" minWidth="25.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="25.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="SW_RESIZE" />
+               </cursor>
+            </Button>
+         </children>
+         <cursor>
+            <Cursor fx:constant="V_RESIZE" />
+         </cursor>
+      </AnchorPane>
+   </bottom>
+   <stylesheets>
+      <URL value="@../../stylesheet/ScrollPane.css" />
+      <URL value="@../../stylesheet/button23.css" />
+   </stylesheets>
+</BorderPane>

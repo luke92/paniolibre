@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane fx:id="ventanaUsuario" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="514.0" style="-fx-background-color: #91DC5A;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.administracion.ControladorUsuarioModificar">
+   <header>
+      <HBox alignment="CENTER" prefHeight="58.0" prefWidth="392.0" style="-fx-background-color: #91DC5A;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </header>
+   <content>
+      <AnchorPane prefHeight="353.0" prefWidth="392.0" style="-fx-background-color: #303030;">
+         <children>
+            <Text fill="WHITE" layoutX="49.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+            <Button fx:id="btnModificar" cancelButton="true" layoutX="271.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#modificar" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #34519b;" text="Modificar" textFill="#fffbfb" />
+            <Text fill="WHITE" layoutX="49.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido" />
+            <Text fill="WHITE" layoutX="53.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario" />
+            <Text fill="WHITE" layoutX="54.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" />
+            <Text fill="WHITE" layoutX="56.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clave" />
+            <TextField fx:id="textNombre" layoutX="210.0" layoutY="10.0" prefHeight="25.0" prefWidth="268.0" />
+            <TextField fx:id="txtApellido" layoutX="212.0" layoutY="45.0" prefHeight="25.0" prefWidth="267.0" />
+            <TextField fx:id="txtUserName" layoutX="212.0" layoutY="80.0" prefHeight="25.0" prefWidth="267.0" />
+            <TextField fx:id="txtMail" layoutX="211.0" layoutY="117.0" prefHeight="25.0" prefWidth="266.0" />
+            <PasswordField fx:id="txtClave" layoutX="211.0" layoutY="155.0" prefHeight="25.0" prefWidth="267.0" />
+            <Button fx:id="btnDescartar" cancelButton="true" layoutX="390.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#descartar" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #a51f10;" text="Descartar" textFill="#fffbfb" />
+            <Text fill="WHITE" layoutX="49.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recibe alertas por Mail" />
+            <CheckBox fx:id="chkRecibeAlertasPorMail" layoutX="210.0" layoutY="259.0" mnemonicParsing="false" text="CheckBox" />
+            <Text fill="WHITE" layoutX="53.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario Mantis" />
+            <Text fill="WHITE" layoutX="56.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clave Mantis" />
+            <TextField fx:id="txtUserNameMantis" layoutX="212.0" layoutY="188.0" prefHeight="25.0" prefWidth="267.0" />
+            <PasswordField fx:id="txtClaveMantis" layoutX="212.0" layoutY="222.0" prefHeight="25.0" prefWidth="267.0" />
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>

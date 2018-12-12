@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="principal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="1195.0" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.MenuPrincipalControlador">
+   <top>
+      <VBox fx:id="contenedorBarras" style="-fx-background-color: #91DC5A;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="barraStage" alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="1278.0" style="-fx-background-color: #404040;">
+               <children>
+                  <Button fx:id="btnVolver" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="44.0" minWidth="39.0" mnemonicParsing="false" onMouseClicked="#volverMenuPrincipal" prefHeight="44.0" prefWidth="39.0" style="-fx-background-color: #404040; -fx-text-fill: #f0f0f0;">
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/tecla-de-flecha-izquierda.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <ImageView fitHeight="60.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+                     <image>
+                        <Image url="@../../iconos/martillo2.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text fx:id="txtRuta" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Pañolibre" wrappingWidth="114.962890625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="2153.0">
+                     <children>
+                        <Label fx:id="lblNombreSeccion" prefHeight="53.0" prefWidth="474.0" textFill="#8ad256">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></HBox>
+                  <Button fx:id="btnUsuario" alignment="BASELINE_LEFT" graphicTextGap="5.0" minHeight="25.0" minWidth="110.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: transparent;" text="Usuario" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/usuario_verde.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnMinimizar" contentDisplay="GRAPHIC_ONLY" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/minimize_verde.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnMaximizar" contentDisplay="GRAPHIC_ONLY" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/maximize_verde.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnCerrar" contentDisplay="GRAPHIC_ONLY" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/closewindowapplication_cerca_ventan_2874.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <Blend />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="HboxSeparador1" prefHeight="6.0" prefWidth="721.0" style="-fx-background-color: #C1C1C1;" />
+            <HBox fx:id="barraPrincipal" alignment="TOP_CENTER" prefHeight="116.0" prefWidth="1278.0" style="-fx-background-color: #303030;">
+               <children>
+                  <Button fx:id="btnInsumos" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#abrirInsumos" prefHeight="114.0" prefWidth="158.0" style="-fx-background-color: #404040; -fx-text-fill: #f0f0f0;" text="Insumos">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/insumos.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnHerramientas" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#abrirHerramientas" prefHeight="114.0" prefWidth="154.0" style="-fx-background-color: #404040; -fx-text-fill: #f0f0f0;" text="Herramientas">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/herramientasTransparente.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+
+                  <Button fx:id="btnOrdenesTrabajo" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#abrirOrdenesTrabajo" prefHeight="114.0" prefWidth="158.0" style="-fx-background-color: #404040; -fx-text-fill: #f0f0f0;" text="Ordenes de Trabajo">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/lista.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnAdministracion" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#abrirAdministracion" prefHeight="114.0" prefWidth="154.0" style="-fx-background-color: #404040; -fx-text-fill: #f0f0f0;" text="Administración">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="92.0" onMouseClicked="#abrirAdministracion" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/engranajes-herramienta-de-configuracion(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox fx:id="HboxSeparador2" prefHeight="6.0" prefWidth="721.0" style="-fx-background-color: #C1C1C1;" />
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane style="-fx-background-color: #3D3D3D; -fx-background-radius: 50;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.ControladorBienvenida">
+   <center>
+      <Label fx:id="saludo" alignment="CENTER" prefHeight="163.0" prefWidth="674.0" style="-fx-background-color: #3D3D3D; -fx-background-radius: 50;" text="Bienvenido" textAlignment="CENTER" textFill="#7ebf4e" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="72.0" />
+         </font>
+      </Label>
+   </center>
+</BorderPane>

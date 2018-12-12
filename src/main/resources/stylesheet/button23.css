@@ -1,0 +1,85 @@
+#btnUsuario
+{
+	-fx-background-color: #606060;
+}
+
+#btnLogin
+{
+	-fx-background-color: #606060;
+}
+#btnConfiguracion
+{
+	-fx-background-color: #606060;
+}
+#btnProcesarPedido
+{
+	-fx-background-color: #606060;
+}
+#btnIngresar
+{
+	-fx-background-color: #606060;
+}
+#btnAcercaDe
+{
+
+	-fx-background-color: #606060;
+}
+#btnAcercaDe:pressed
+{
+
+	-fx-background-color: #808080;
+}
+#btnIngresar:pressed
+{
+	-fx-background-color: #808080;
+}
+#btnProcesarPedido:pressed
+{
+	-fx-background-color: #808080;
+}
+
+#btnConfiguracion:pressed
+{
+	-fx-background-color: #808080;
+}
+
+
+#btnUsuario:pressed
+{
+	-fx-background-color: #808080;
+}
+
+#btnLogin:pressed
+{
+	-fx-background-color: #808080;
+}
+
+
+.button 
+{
+	
+	-fx-background-color: #404040;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+	-fx-font-family: System;
+
+}
+
+.button:pressed 
+{
+	
+	-fx-background-color: #808080;
+
+}
+
+#lblAlertas 
+{
+	
+	-fx-background-color: red;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+	-fx-font-family: System;
+	-fx-font-size: 10;
+	-fx-background-radius: 500;
+
+}

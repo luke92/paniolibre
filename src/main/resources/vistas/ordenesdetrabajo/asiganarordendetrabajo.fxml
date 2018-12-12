@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane fx:id="ventanaRegistrarOrden" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1040.0" style="-fx-background-color: #91DC5A;" xmlns="http://javafx.com/javafx/8.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.ordenes.ControladorOrdenDeTrabajoAsignar">
+   <header>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #91DC5A;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Asignar Orden de Trabajo">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </header>
+   <content>
+      <AnchorPane prefHeight="700.0" prefWidth="1040.0" style="-fx-background-color: #303030;">
+         <children>
+            <TextField fx:id="txtIdMantis" disable="true" layoutX="305.0" layoutY="48.0" prefHeight="25.0" prefWidth="163.0" promptText="ID Orden de Trabajo Mantis" />
+            <ChoiceBox fx:id="chbProyecto" disable="true" layoutX="305.0" layoutY="82.0" prefHeight="25.0" prefWidth="162.0" />
+            <DatePicker fx:id="datePickerFechaInicio" disable="true" layoutX="304.0" layoutY="119.0" prefHeight="25.0" prefWidth="163.0" />
+            <TextField fx:id="txtResumen" disable="true" layoutX="305.0" layoutY="157.0" prefHeight="25.0" prefWidth="163.0" promptText="Ingrese Resumen" />
+            <ChoiceBox fx:id="chbTipoActividad" disable="true" layoutX="627.0" layoutY="82.0" prefHeight="25.0" prefWidth="190.0" />
+            <TextField fx:id="txtModuloSede" disable="true" layoutX="626.0" layoutY="48.0" prefHeight="25.0" prefWidth="191.0" promptText="Ingrese Resumen" />
+            <TextArea fx:id="textDescripcion" disable="true" layoutX="626.0" layoutY="123.0" onKeyPressed="#validarAgregarOrden" prefHeight="59.0" prefWidth="189.0" promptText="Descripcion de la Orden de Trabajo" />
+            <Text fill="WHITE" layoutX="548.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion" />
+            <Text fill="WHITE" layoutX="219.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resumen" />
+            <Button fx:id="btnAceptar" cancelButton="true" layoutX="768.0" layoutY="571.0" mnemonicParsing="false" onMouseClicked="#asignarOrden" style="-fx-background-color: #505050;" text="Aceptar" textFill="#fffbfb" />
+            <Text fill="WHITE" layoutX="214.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID MANTIS" />
+            <Text fill="WHITE" layoutX="225.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proyecto" />
+            <Text fill="WHITE" layoutX="209.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha Inicio" />
+            <Text fill="WHITE" layoutX="518.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Actividad" />
+            <Text fill="WHITE" layoutX="525.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modulo / Sede" />
+            <BorderPane layoutX="19.0" layoutY="209.0" prefHeight="352.0" prefWidth="459.0" style="-fx-background-color: #404040;">
+               <center>
+                  <TableView fx:id="tablaTecnicosDisponibles" prefHeight="167.0" prefWidth="429.0">
+                     <columns>
+                        <TableColumn fx:id="columnaNombre" editable="false" prefWidth="119.0" sortable="false" text="Nombre" />
+                        <TableColumn fx:id="columnaApellido" editable="false" prefWidth="120.0" sortable="false" text="Apellido" />
+                        <TableColumn fx:id="columnaEspecialidad" editable="false" minWidth="0.0" prefWidth="188.0" sortable="false" text="Especialidades" />
+                     </columns>
+                     <BorderPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </BorderPane.margin>
+                  </TableView>
+               </center>
+               <top>
+                  <VBox prefHeight="88.0" prefWidth="429.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="399.0" style="-fx-background-color: #303030;">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" top="15.0" />
+                           </VBox.margin>
+                           <children>
+                              <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="32.0" prefWidth="37.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #404040;" text="Filtrar">
+                                 <graphic>
+                                    <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../iconos/busqueda-de-datos-plaza-simbolo-de-interfaz-con-una-herramienta-de-lupa_318-56447.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="txtBusqueda">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" style="-fx-background-color: #91DC5A;">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Tecnicos Disponibles">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </top>
+            </BorderPane>
+            <BorderPane layoutX="564.0" layoutY="225.0" prefHeight="334.0" prefWidth="465.0" style="-fx-background-color: #404040;">
+               <center>
+                  <TableView fx:id="tablaTecnicosAsignados" prefHeight="215.0" prefWidth="435.0">
+                     <columns>
+                        <TableColumn fx:id="columnaNombre1" editable="false" prefWidth="124.0" sortable="false" text="Nombre" />
+                        <TableColumn fx:id="columnaApellido1" editable="false" minWidth="0.0" prefWidth="128.0" sortable="false" text="Apellido" />
+                        <TableColumn fx:id="columnaEspecialidad1" editable="false" prefWidth="175.0" sortable="false" text="Especialidades" />
+                     </columns>
+                     <BorderPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </BorderPane.margin>
+                  </TableView>
+               </center>
+               <top>
+                  <VBox BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="17.0" prefWidth="435.0" style="-fx-background-color: #303030;">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" top="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="408.0" style="-fx-background-color: #91DC5A;">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Tecnicos Asignados">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </top>
+            </BorderPane>
+            <Button fx:id="btnEnviar" layoutX="497.0" layoutY="416.0" mnemonicParsing="false" onMouseClicked="#enviar" prefHeight="35.0" prefWidth="47.0" text="&gt;&gt;" />
+            <Button fx:id="btnDevolver" layoutX="497.0" layoutY="512.0" mnemonicParsing="false" onMouseClicked="#devolver" prefHeight="35.0" prefWidth="47.0" text="&lt;&lt;" />
+            <Button fx:id="btnDescartar" cancelButton="true" layoutX="853.0" layoutY="571.0" mnemonicParsing="false" onMouseClicked="#descartar" style="-fx-background-color: #505050;" text="Descartar" textFill="#fffbfb" />
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>

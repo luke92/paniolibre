@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane fx:id="ventanaModificacionOrden" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="459.0" style="-fx-background-color: #91DC5A;" xmlns="http://javafx.com/javafx/8.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.ordenes.ControladorOrdenDeTrabajoEditar">
+   <header>
+      <HBox alignment="CENTER" prefHeight="58.0" prefWidth="392.0" style="-fx-background-color: #91DC5A;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar Orden de Trabajo">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </header>
+   <content>
+      <AnchorPane prefHeight="353.0" prefWidth="392.0" style="-fx-background-color: #303030;">
+         <children>
+            <TextField fx:id="txtIdMantis" layoutX="220.0" layoutY="49.0" onKeyPressed="#validarModificarOrden" prefHeight="25.0" prefWidth="163.0" promptText="ID Orden de Trabajo Mantis" />
+            <ChoiceBox fx:id="chbProyecto" layoutX="220.0" layoutY="83.0" prefHeight="25.0" prefWidth="162.0" />
+            <DatePicker fx:id="datePickerFechaInicio" layoutX="219.0" layoutY="120.0" prefHeight="25.0" prefWidth="163.0" />
+            <TextField fx:id="txtResumen" layoutX="220.0" layoutY="158.0" onKeyPressed="#validarModificarOrden" prefHeight="25.0" prefWidth="163.0" promptText="Ingrese Resumen" />
+            <Text fill="WHITE" layoutX="58.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resumen" />
+            <ChoiceBox fx:id="chbTipoActividad" layoutX="220.0" layoutY="191.0" prefHeight="25.0" prefWidth="162.0" />
+            <TextField fx:id="txtModuloSede" layoutX="219.0" layoutY="227.0" onKeyPressed="#validarModificarOrden" prefHeight="25.0" prefWidth="163.0" promptText="Ingrese Resumen" />
+            <Text fill="WHITE" layoutX="58.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion" />
+            <ChoiceBox fx:id="chbEstado" layoutX="220.0" layoutY="258.0" prefHeight="25.0" prefWidth="162.0" visible="false" />
+            <TextArea fx:id="textDescripcion" layoutX="220.0" layoutY="303.0" onKeyPressed="#validarModificarOrden" prefHeight="111.0" prefWidth="189.0" promptText="Descripcion de la Orden de Trabajo" />
+            <Button fx:id="btnModificar" defaultButton="true" disable="true" layoutX="68.0" layoutY="424.0" mnemonicParsing="false" onMouseClicked="#modificarOrden" style="-fx-background-color: #505050;" text="Modificar" textFill="WHITE" />
+            <Button fx:id="btnDescartarOrden" cancelButton="true" layoutX="342.0" layoutY="424.0" mnemonicParsing="false" onMouseClicked="#descartarModificacionOrden" style="-fx-background-color: #505050;" text="Descartar" textFill="#fffbfb" />
+            <Text fill="WHITE" layoutX="59.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID MANTIS" />
+            <Text fill="WHITE" layoutX="59.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proyecto" />
+            <Text fill="WHITE" layoutX="58.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha Inicio" />
+            <Text fill="WHITE" layoutX="59.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Actividad" />
+            <Text fill="WHITE" layoutX="58.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modulo / Sede" />
+            <Text fill="WHITE" layoutX="58.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado" visible="false" />
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>

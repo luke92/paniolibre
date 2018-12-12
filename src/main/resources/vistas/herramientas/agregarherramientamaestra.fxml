@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane fx:id="panelAgregarHerramienta" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="793.0" prefWidth="1002.0" style="-fx-background-color: #91DC5A;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.HerramientaABM">
+   <header>
+      <HBox alignment="CENTER" prefHeight="58.0" prefWidth="392.0" style="-fx-background-color: #91DC5A;">
+         <children>
+            <Text fx:id="lblHerramienta" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar Herramienta Maestra">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </header>
+   <content>
+      <ScrollPane>
+         <content>
+            <AnchorPane prefHeight="707.0" prefWidth="988.0" style="-fx-background-color: #404040;">
+               <children>
+                  <Button fx:id="btnAgregar" layoutX="354.0" layoutY="329.0" mnemonicParsing="false" onMouseClicked="#agregar" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #2a6025;" text="Agregar" textFill="WHITE" />
+                  <Button fx:id="btnBorrar" cancelButton="true" layoutX="593.0" layoutY="329.0" mnemonicParsing="false" onMouseClicked="#borrar" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #a51f10;" text="Borrar" textFill="WHITE" />
+                  <TextField fx:id="texCodigo" layoutX="279.0" layoutY="43.0" />
+                  <Text fill="WHITE" layoutX="202.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo: " />
+                  <TextField fx:id="texNombre" layoutX="279.0" layoutY="77.0" />
+                  <Text fill="WHITE" layoutX="199.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre: " />
+                  <Text fill="WHITE" layoutX="508.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ubicacion: " />
+                  <ChoiceBox fx:id="choUbicacion" layoutX="567.0" layoutY="179.0" prefHeight="25.0" prefWidth="151.0" />
+                  <Text fx:id="lblCategoria" fill="WHITE" layoutX="444.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria " />
+                  <Text fill="WHITE" layoutX="187.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N° Factura " />
+                  <TextField fx:id="texFactura" layoutX="279.0" layoutY="145.0" />
+                  <Text fill="WHITE" layoutX="173.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero Activo: " />
+                  <TextField fx:id="texNumActivo" layoutX="279.0" layoutY="179.0" />
+                  <Text fill="WHITE" layoutX="189.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comentario: " />
+                  <TextArea fx:id="texComentario" layoutX="279.0" layoutY="213.0" prefHeight="107.0" prefWidth="152.0" />
+                  <Text fill="WHITE" layoutX="442.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forma de adquisicion: " />
+                  <TextField fx:id="texAdiquisicion" layoutX="566.0" layoutY="299.0" />
+                  <Text fill="WHITE" layoutX="449.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de adquisicion: " />
+                  <DatePicker fx:id="DateAdquisicion" layoutX="567.0" layoutY="209.0" prefHeight="25.0" prefWidth="150.0" />
+                  <Text fill="WHITE" layoutX="479.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha Garantia: " />
+                  <DatePicker fx:id="DateGarantia" layoutX="567.0" layoutY="240.0" prefHeight="25.0" prefWidth="148.0" />
+                  <Text fill="WHITE" layoutX="502.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proveedor: " />
+                  <TextField fx:id="texProveedor" layoutX="566.0" layoutY="270.0" />
+                  <Button fx:id="btnModificar" cancelButton="true" layoutX="473.0" layoutY="329.0" mnemonicParsing="false" onMouseClicked="#modificar" style="-fx-background-color: #34519b;" text="Modificar" textFill="WHITE" />
+                  <Text fill="WHITE" layoutX="208.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marca" />
+                  <TextField fx:id="textMarca" layoutX="279.0" layoutY="112.0" />
+                  <Button fx:id="btnCerrar" layoutX="890.0" layoutY="14.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="32.0" style="-fx-background-color: transparent;" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/closewindowapplication_cerca_ventan_2874.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TreeView fx:id="treeViewCategorias" layoutX="444.0" layoutY="65.0" prefHeight="107.0" prefWidth="275.0" showRoot="false" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </content>
+</DialogPane>

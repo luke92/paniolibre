@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderpanelHerramientas" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.MenuHerramientasControlador">
+   <left>
+      <ScrollPane hbarPolicy="NEVER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="1084.0" prefWidth="176.0" style="-fx-background-color: #303030;" vbarPolicy="ALWAYS">
+         <content>
+            <VBox prefHeight="1084.0" prefWidth="166.0" style="-fx-background-color: #303030;">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#cambiarPanelHerramientasMaestros" prefHeight="100.0" prefWidth="150.0" text="Herramientas maestras">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/insumos.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#cambiarPanelRetiros" prefHeight="100.0" prefWidth="150.0" text="Retiros">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/retiros.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#cambiarPanelDevoluciones" prefHeight="100.0" prefWidth="150.0" text="Devoluciones">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/listastock.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#cambiarPanelReparaciones" prefHeight="100.0" prefWidth="150.0" text="Reparaciones">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <graphic>
+                        <ImageView disable="true" fitHeight="73.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/stock.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#cambiarPanelCategoriasHerramientas" prefHeight="100.0" prefWidth="150.0" text="Categorías">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/categoria.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </left>
+   <stylesheets>
+      <URL value="@../../stylesheet/button23.css" />
+      <URL value="@../../stylesheet/ScrollPane.css" />
+   </stylesheets>
+</BorderPane>

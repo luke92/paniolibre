@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderpanelTecnicos" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.tecnicos.ControladorMenuTecnicos">
+   <center>
+      <ScrollPane nodeOrientation="RIGHT_TO_LEFT" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+         <content>
+            <VBox style="-fx-background-color: #303030;">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="TOP" disable="true" mnemonicParsing="false" prefHeight="100.0" prefWidth="145.0" style="-fx-background-color: #404040; -fx-text-fill: #f0f0f0;" text="Funcionalidad DEMO">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/lista.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#cambiarPanelABM" prefHeight="100.0" prefWidth="145.0" style="-fx-background-color: #404040; -fx-text-fill: #f0f0f0;" text="Lista de Técnicos">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../iconos/listastock.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

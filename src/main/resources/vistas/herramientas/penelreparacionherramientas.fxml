@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="panelHerramientasReparacion" prefHeight="717.0" prefWidth="1013.0" style="-fx-background-color: #404040;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.ReparacionesAgregarControlador">
+   <center>
+      <BorderPane>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <center>
+            <BorderPane>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <center>
+                  <TableView fx:id="tablaHerramientas" prefHeight="642.0" prefWidth="1011.0">
+                     <columns>
+                        <TableColumn fx:id="columnaCodigo" editable="false" prefWidth="78.0" sortable="false" text="Codigo" />
+                        <TableColumn fx:id="columnaNombre" editable="false" prefWidth="95.0" sortable="false" text="Nombre" />
+                        <TableColumn fx:id="columnaCategoria" editable="false" minWidth="0.0" prefWidth="120.0" sortable="false" text="Categoria" />
+                        <TableColumn fx:id="columnaEstado" editable="false" minWidth="0.0" prefWidth="97.0" sortable="false" text="Estado" />
+                        <TableColumn fx:id="columnaComentario" editable="false" minWidth="0.0" prefWidth="179.0" sortable="false" text="Comentario" />
+                        <TableColumn fx:id="columnaBntReparar" editable="false" minWidth="0.0" prefWidth="99.0" sortable="false" text="Reparar" />
+                     </columns>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </TableView>
+               </center>
+               <top>
+                  <VBox BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane minHeight="64.0" style="-fx-background-color: #91DC5A;">
+                           <children>
+                              <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="757.0" layoutY="9.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="31.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #404040;" text="Filtrar" AnchorPane.rightAnchor="174.0">
+                                 <graphic>
+                                    <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../iconos/busqueda.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <TextField fx:id="txtBusqueda" layoutX="816.0" layoutY="20.0" AnchorPane.rightAnchor="14.0" />
+                              <Text layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Reparaciones Pendientes">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </top>
+            </BorderPane>
+         </center>
+         <left>
+            <HBox fx:id="HboxSeparadorLeft" prefHeight="3.0" prefWidth="3.0" style="-fx-background-color: #C1C1C1;" BorderPane.alignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="W_RESIZE" />
+               </cursor>
+            </HBox>
+         </left>
+      </BorderPane>
+   </center>
+   <left>
+      <fx:include fx:id="panelABMReparaciones" source="panelabmreparaciones.fxml" /> 
+   </left>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="64.0" prefWidth="836.0" style="-fx-background-color: #303030;">
+               <children>
+                  <Button fx:id="btnPendientes" mnemonicParsing="false" onMouseClicked="#llenarTablaPendientes" prefHeight="70.0" prefWidth="112.0" style="-fx-background-color: #404040; -fx-text-fill: #f0f0f0;" text="Pendientes" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnEnCurso" mnemonicParsing="false" onMouseClicked="#llenarTablaEnCurso" prefHeight="85.0" prefWidth="117.0" style="-fx-text-fill: #f0f0f0; -fx-background-color: #404040;" text="En Curso">
+                     <HBox.margin>
+                        <Insets left="1.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox fx:id="HboxSeparador2" prefHeight="3.0" prefWidth="721.0" style="-fx-background-color: #C1C1C1;" />
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

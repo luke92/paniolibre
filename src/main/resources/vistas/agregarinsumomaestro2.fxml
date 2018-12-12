@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderPrinipal" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.insumos.VentanaIngresarInsumoControlador">
+   <center>
+      <BorderPane fx:id="ventanaAgregarInsumo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #303030;" stylesheets="@../stylesheet/button23.css">
+         <top>
+            <AnchorPane fx:id="barraPrincipal" prefHeight="64.0" prefWidth="200.0" style="-fx-background-color: #91DC5A;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" layoutY="16.0" prefHeight="32.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar insumo maestro">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnDescartar" contentDisplay="GRAPHIC_ONLY" layoutX="568.0" layoutY="5.0" minHeight="27.0" minWidth="27.0" mnemonicParsing="false" onMouseClicked="#descartarInsumoMaestro" prefHeight="27.0" prefWidth="27.0" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/closewindowapplication_cerca_ventan_2874.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <HBox fx:id="HboxSeparador1" prefHeight="3.0" style="-fx-background-color: #C1C1C1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <HBox fx:id="HboxSeparador11" prefHeight="3.0" style="-fx-background-color: #C1C1C1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #91DC5A;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="HboxSeparador111" prefHeight="3.0" style="-fx-background-color: #C1C1C1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <HBox fx:id="HboxSeparador112" prefHeight="3.0" style="-fx-background-color: #C1C1C1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="485.0" prefWidth="586.0" style="-fx-background-color: #303030;">
+               <children>
+                  <Text fill="WHITE" layoutX="56.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" wrappingWidth="46.447265625" />
+                  <Text fill="WHITE" layoutX="13.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Umbral mínimo:" />
+                  <Text fill="WHITE" layoutX="334.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoría:" />
+                  <Text fill="WHITE" layoutX="25.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comentarios:" />
+                  <TextField fx:id="textCodigo" layoutX="117.0" layoutY="38.0" onInputMethodTextChanged="#validarAgregarInsumo" onKeyPressed="#validarAgregarInsumo" onKeyReleased="#validarAgregarInsumo" onKeyTyped="#validarAgregarInsumo" prefHeight="25.0" prefWidth="185.0" promptText="AA123" />
+                  <TextField fx:id="textNombre" layoutX="117.0" layoutY="79.0" onInputMethodTextChanged="#validarAgregarInsumo" onKeyPressed="#validarAgregarInsumo" onKeyReleased="#validarAgregarInsumo" onKeyTyped="#validarAgregarInsumo" prefHeight="25.0" prefWidth="185.0" promptText="Martillo" />
+                  <TextField fx:id="textMarca" layoutX="116.0" layoutY="121.0" onInputMethodTextChanged="#validarAgregarInsumo" onKeyPressed="#validarAgregarInsumo" onKeyReleased="#validarAgregarInsumo" onKeyTyped="#validarAgregarInsumo" prefHeight="25.0" prefWidth="186.0" promptText="Odín" />
+                  <Spinner fx:id="spnUmbralMinimo" editable="true" layoutX="116.0" layoutY="163.0" onKeyReleased="#processKeyEvent" prefHeight="25.0" prefWidth="186.0" />
+                  <ChoiceBox fx:id="chbUnidadMedida" layoutX="115.0" layoutY="205.0" prefHeight="25.0" prefWidth="188.0" />
+                  <TextArea fx:id="textAreaComentario" layoutX="25.0" layoutY="269.0" onInputMethodTextChanged="#validarAgregarInsumo" onKeyPressed="#validarAgregarInsumo" onKeyReleased="#validarAgregarInsumo" onKeyTyped="#validarAgregarInsumo" prefHeight="176.0" prefWidth="280.0" wrapText="true" />
+                  <Button fx:id="btnAgregar" defaultButton="true" disable="true" layoutX="485.0" layoutY="454.0" mnemonicParsing="false" onMouseClicked="#agregarInsumoMaestro" prefHeight="40.0" prefWidth="100.0" text="Agregar" textFill="WHITE" />
+                  <Text fill="WHITE" layoutX="60.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código:" />
+                  <Text fill="WHITE" layoutX="62.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marca:" />
+                  <Text fill="WHITE" layoutX="14.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unidad Medida:" />
+                  <TreeView fx:id="treeViewCategorias" layoutX="334.0" layoutY="36.0" onMouseClicked="#validarAgregarInsumo" prefHeight="409.0" prefWidth="251.0" showRoot="false" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </center>
+   <left>
+      <HBox fx:id="HboxSeparadorLeft" prefHeight="3.0" prefWidth="3.0" style="-fx-background-color: #C1C1C1;" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="W_RESIZE" />
+         </cursor>
+      </HBox>
+   </left>
+   <right>
+      <HBox fx:id="HboxSeparadorLeft1" prefHeight="3.0" prefWidth="3.0" style="-fx-background-color: #C1C1C1;" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="W_RESIZE" />
+         </cursor>
+      </HBox>
+   </right>
+</BorderPane>
