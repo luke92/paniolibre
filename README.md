@@ -8,3 +8,4 @@ Maven <br>
 JavaFX <br>
 MantisBT <br>
 MySQL <br>
+NSIS for create install with .nsi
